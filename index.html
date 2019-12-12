@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Alertify -->
+	<link rel="stylesheet" href="node_modules\alertifyjs\build\css\alertify.min.css"/>
+	<!-- Default theme -->
+	<link rel="stylesheet" href="node_modules\alertifyjs\build\css\default.css"/>
+	<!-- Semantic UI theme -->
+	<link rel="stylesheet" href="node_modules\alertifyjs\build\css\semantic.min.css"/>
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="node_modules\alertifyjs\build\css\bootstrap.min.css"/>
+	<style type="text/css" media="screen">
+		.ajs-message { color: #111;  background-color: #d9edf7;  border-color: #31708f; font-size: 18px; }
+		.alertify-notifier{padding: 20px 20px}
+	</style>
+</head>
+<body>
+	<div class="scoresBoard">
+		<p class="scores">Scores: <a class="aScores">0</a></p>	
+		<p class="lives">Lives: <a class="aLives">5</a></p>	
+		<p class="gameOver">Game Over: <a class="aGameOver">False</a></p>	
+		<p class="countDown">Time: </p>
+	</div>
+		<div class="alert">
+		</div>
+
+    <script src="ES6/resources.js"></script>
+    <script src="ES5/app.js"></script>
+    <script src="ES5/engine.js"></script>
+    <script src="node_modules\alertifyjs\build\alertify.min.js">
+    </script>
+</body>
+</html>

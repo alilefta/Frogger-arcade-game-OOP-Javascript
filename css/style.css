@@ -1,0 +1,97 @@
+body {
+  text-align: center;
+
+}
+.scoresBoard p{
+	padding: 10px;
+	font-size: 20px;
+	background-color: #fff;
+	border: 1px solid #9999;
+	margin-bottom: -10px
+}
+
+.scoresBoard{
+	margin-top: 20px;
+}
+
+.scoresBoard p:nth-child(1){
+	display: inline;
+}
+
+.scoresBoard p:nth-child(2){
+	display: inline;
+}
+
+.gameOver, .countDown {
+	display: inline;
+}
+
+.gameOver{
+  color: white;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: -o-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+
+.aGameOver{
+  color: #f44336;
+}
+
+.scores{
+	color:white;
+	font-weight: bold;
+  background-image: -webkit-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: -o-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+.lives{
+	color:white;
+	font-weight: bold;
+  background-image: -webkit-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: -o-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+
+.countDown{
+  color: white;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: -o-linear-gradient(left, #4e54c8, #8f94fb);
+  background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+
+.gameOver, .countDown, .lives, .scores{
+  border-radius: 9px;
+  box-shadow: 2px 4px 8px #888;
+  margin: 8px;
+}
+/*=======================*/
+/*Alert Message Section*/
+/* The alert message box */
+/*.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  display: none;
+  width: 30%;
+  transition : .6s .25s;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}*/
