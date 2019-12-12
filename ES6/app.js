@@ -82,7 +82,7 @@ class Player{
         this.x = 200;
     }
     updateView(message, color){
-        alertify.notify(message, 1);
+        alertMessage.innerText = message;
     }
     gameOver(){
      if(lives <= 0){
