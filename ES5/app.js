@@ -95,7 +95,7 @@ var Player = function () {
     }, {
         key: 'updateView',
         value: function updateView(message, color) {
-            alertify.notify(message, 1);
+            alertMessage.innerText = message;
         }
     }, {
         key: 'gameOver',
