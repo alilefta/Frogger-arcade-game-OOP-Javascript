@@ -11,6 +11,35 @@ var gameOver = false;
 var alertMessage = document.querySelector('.alert');
 var timer = document.querySelector('.countDown');
 
+var seconds = 180;
+      function secondPassed() {
+          var minutes = Math.round((seconds - 30)/60),
+              remainingSeconds = seconds % 60;
+
+          if (remainingSeconds < 10) {
+              remainingSeconds = "0" + remainingSeconds;
+              // timer.style.color = ;
+          }
+
+          timer.innerHTML = minutes + ":" + remainingSeconds;
+          if (seconds == 0) {
+              clearInterval(countdownTimer);
+             //form1 is your form name
+            player.resetPosition();
+            player.updateView('Time Is Over', '#f44336');
+            document.querySelector('.aLives').innerText = lives = 5;
+            document.querySelector('.aScores').innerText = scores = 0;
+            document.querySelector('.aGameOver').innerText = 'False';
+          } else {
+              seconds--;
+          }
+      }
+var countdownTimer = setInterval('secondPassed()', 1000);
+
+
+
+
+
 // Enemies our player must avoid
 var Enemy = function Enemy(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -74,7 +103,7 @@ var Player = function () {
         key: 'update',
         value: function update(dt) {
             // console.log('Position X : '+ this.x)
-            console.log('Position Y : ' + this.y);
+            // console.log('Position Y : ' + this.y);
 
             if (this.x === key.x && this.y === key.y) {
                 scores += 10;
@@ -95,7 +124,13 @@ var Player = function () {
     }, {
         key: 'updateView',
         value: function updateView(message, color) {
-            alertMessage.innerText = message;
+            // alertMessage.innerText = message;
+            // alertMessage.style.display = 'block';
+            // alertMessage.style.backgroundColor = color;
+            // setTimeout(function(){
+            //     alertMessage.style.display = 'none';
+            // }, 1000)
+            alertify.notify(message, 1)
         }
     }, {
         key: 'gameOver',
@@ -107,12 +142,14 @@ var Player = function () {
                     document.querySelector('.aLives').innerText = lives = 5;
                     document.querySelector('.aScores').innerText = scores = 0;
                     document.querySelector('.aGameOver').innerText = 'False';
+                    seconds = 180;
                     window.heart = new Heart();
                 } else {
                     alert('Thanks for playing our game.');
                     document.querySelector('.aLives').innerText = lives = 5;
                     document.querySelector('.aScores').innerText = scores = 0;
                     document.querySelector('.aGameOver').innerText = 'False';
+                    seconds = 180;
                 }
             }
         }
@@ -334,7 +371,6 @@ var Key = function () {
         key: 'update',
         value: function update() {
             if (this.x === player.x && this.y === player.y) {
-                console.log('Collected The Key');
                 window.key = {};
                 gem.gemRePosition();
                 heart.heartRePosition();

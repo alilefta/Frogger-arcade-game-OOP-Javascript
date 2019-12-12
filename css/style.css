@@ -75,8 +75,9 @@ body {
   color: white;
   margin-bottom: 15px;
   display: none;
-  width: 30%;
+  width: 25%;
   transition : .6s .25s;
+  z-index: 1;
 }
 
 /* The close button */
