@@ -130,7 +130,7 @@ var Player = function () {
             // setTimeout(function(){
             //     alertMessage.style.display = 'none';
             // }, 1000)
-            alertify.notify(message, 1)
+//             alertify.notify(message, 1)
         }
     }, {
         key: 'gameOver',
